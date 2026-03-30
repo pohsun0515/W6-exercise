@@ -40,10 +40,12 @@ for round_num, order in enumerate(orders):
     else :
         if length_A>0 :
             print(f"A 廠生產完成 :{barracks_A.popleft()}出列")
+            length_A -= 1
         else :
             print("A 廠沒東西可做(underflow 防護成功)")
         if length_B>0 :
             print(f"B 廠生產完成 :{barracks_B.popleft()}出列")
+            length_B -= 1
         else :
             print("B 廠沒東西可做(underflow 防護成功)")
         if player_gold > order["cost"] :
