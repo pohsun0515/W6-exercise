@@ -2,11 +2,12 @@
 
 nums = [2, 7, 11, 15]
 target = 9
-
+L=[]
+for x in nums :
+    if x >= 9 : continue
+    else : L.append(x)
 A=[]
-for i in range(len(nums)) :
-    if nums[i] >= 9 : break
-    for j in range(i+1,len(nums)) :
-        if nums[j] >= 9 : break
-        if nums[i] + nums[j] == target : A.append((i,j))
+for i in range(len(L)) :
+    for j in range(i+1,len(L)) :
+        if L[i] + L[j] == 9 : A.append((i,j))
 print(*A)
