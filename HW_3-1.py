@@ -18,8 +18,10 @@ orders = [
 
 for round_num, order in enumerate(orders):
     print(f"\n--- 第 {round_num} 回合 ---") # 方便看輸出結果
-
     # TODO
+    if order == {} :
+        print("玩家本回合無動作，單純推進時間")
+        continue
     if round_num%2 :
         if player_gold > order["cost"] :
             if length_A<=2 or length_B<=2 :
